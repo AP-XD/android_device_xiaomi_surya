@@ -14,6 +14,8 @@ $(call inherit-product, vendor/styx/config/common.mk)
 
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := styx_surya
@@ -23,5 +25,8 @@ PRODUCT_MODEL := POCO X3 NFC
 PRODUCT_MANUFACTURER := Xiaomi
 DEVICE_MAINTAINER := AP XD
 
-BUILD_FINGERPRINT := POCO/surya_global/surya:10/QKQ1.200512.002/V12.0.3.0.QJGMIXM:user/release-keys
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.build.fingerprint=google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys
 TARGET_INCLUDE_PIXEL_CHARGER := true
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
